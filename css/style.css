@@ -221,6 +221,12 @@ nav ul li a:hover{
     transition: 1s;
 }
 
+@media ( min-width:640px) and (max-width:1010px){
+    .text-flex .text,.text1{
+        width: 500px;
+    }
+}
+
 .text h2{
     margin-top: 6px ;
 }
