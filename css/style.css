@@ -22,7 +22,7 @@ html,body{
      background: linear-gradient(
         to bottom,
         #000000 0%,           /* hitam kebiruan gelap di atas */
-        #181a1c 40%,          /* abu gelap */
+        #000000 40%,          /* abu gelap */
         #393E46 80%,          /* abu tua lebih terang */
         rgba(255, 81, 0, 0.15) 100% /* oranye transparan di bawah */
     );
