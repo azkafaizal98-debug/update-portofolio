@@ -771,11 +771,11 @@ textarea::placeholder{
     height: 40px;
     border-radius: 8px;
     border: 2.5px solid white;
-    padding: 10px;
+    padding: 5px;
     background: transparent;
     color:white;
-    font-weight: 1000;
     font-family: "Pixelify Sans", sans-serif;
+    font-size: 12px;
 }
 
 .container-textarea textarea:hover{
