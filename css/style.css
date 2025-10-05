@@ -816,7 +816,7 @@ textarea::placeholder{
   left: 1140px;
   top: 28px;
   -webkit-animation: 0.4s bat steps(1) infinite;
-          animation: 0.4s bat steps(1) infinite;
+   animation: 0.4s bat steps(1) infinite;
 }
 /* Bat animation */
 @-webkit-keyframes bat {
@@ -876,6 +876,6 @@ textarea::placeholder{
     .bat{
   transform: scale(1);
   position: relative;
-  left: 325px;
+  left: 300px;
     }
 }
