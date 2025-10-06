@@ -988,7 +988,21 @@ textarea::placeholder{
 }
 
 
-@media screen and (min-width: 0px) and (max-width: 481px) {
+@media screen and (min-width : 0) and (max-width: 364px) {
+    .bat{
+  transform: scale(1);
+  position: relative;
+  left: 250px;
+    }
+
+     .portofolio-items {
+        width: 100%;
+    }
+    
+}
+
+
+@media screen and (min-width: 365px) and (max-width: 481px) {
     .bat{
   transform: scale(1);
   position: relative;
