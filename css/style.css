@@ -32,9 +32,6 @@ html,body{
     );
     /* cursor: url(../cursor-costum/Cursor1.png) auto; */
     cursor: grab;
-}
-
-html{
     scroll-behavior: smooth;
 }
 
@@ -344,7 +341,8 @@ nav ul li a:hover{
 
 .portofolio-img, img{
     width: 100%;
-    border-radius: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .portofolio-judul{
@@ -380,29 +378,24 @@ nav ul li a:hover{
     padding: 20px;
 }
 
-.demo .live-demo,.github{
+.demo a{
     margin-right: 10px;
     border: 1.8px solid var(--orange);
-    padding: 10px;
+    padding: 10px 20px;
     border-radius: 8px;
     transition: 0.5s;
-}
-
-.demo .live-demo:hover, .github:hover{
-    background-color: var(--orange);
-    border: 1.8px solid white;
-    opacity: 0.6;
-}
-
-.demo a{
     text-decoration: none;
     color: var(--orange);
     transition: 0.5s;
 }
 
-.demo a:hover{
+.demo a:hover {
+    background-color: var(--orange);
+    border: 1.8px solid white;
+    opacity: 0.6;
     color: white;
 }
+
 
 
 
