@@ -293,6 +293,7 @@ nav ul li a:hover{
 
 
 /* Portofolio */
+
 .container-portofolio{
     width: 100%;
     margin-top: 50px;
@@ -343,6 +344,7 @@ nav ul li a:hover{
 
 .portofolio-img, img{
     width: 100%;
+    border-radius: 8px;
 }
 
 .portofolio-judul{
