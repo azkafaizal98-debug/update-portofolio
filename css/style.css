@@ -807,6 +807,45 @@ nav ul li a:hover{
     }
 }
 
+
+/* Sertifikat */
+.container-sertifikat{
+    width: 100%;
+    display: flex;
+}
+
+
+.sertifikat-flex{
+    width: 100%;
+    flex: 0 0 5rem;
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    animation: spin 10s infinite linear;
+    padding-right: 1em;
+}
+
+.sertifikat-items{
+    width: 1000px;
+    z-index: 1;
+}
+
+.sertifikat-items img{
+    width: 100%;
+    border-radius: 0;
+}
+
+@keyframes spin {
+    from{
+        translate: 0%;
+    }
+
+    to{
+        translate: -100%;
+    }
+}
+
 /* Contact */
 
 .container-contact{
@@ -923,10 +962,15 @@ textarea::placeholder{
   height: 1px;
   transform: scale(2);
   position: relative;
-  left: 1140px;
-  top: 28px;
+  left: 100%;
+  top: -100px;
   -webkit-animation: 0.4s bat steps(1) infinite;
    animation: 0.4s bat steps(1) infinite;
+}
+
+.jalan{
+    width: 100%;
+    animation: gerak 8s infinite linear;
 }
 /* Bat animation */
 @-webkit-keyframes bat {
@@ -982,13 +1026,18 @@ textarea::placeholder{
   }
 }
 
+@keyframes gerak {
+    from{
+        translate: 0%;
+    }
+
+    to{
+        translate: -150%;
+    }
+}
+
 
 @media screen and (min-width : 0) and (max-width: 364px) {
-    .bat{
-  transform: scale(1);
-  position: relative;
-  left: 250px;
-    }
 
      .portofolio-items {
         width: 100%;
@@ -1003,11 +1052,6 @@ textarea::placeholder{
 
 
 @media screen and (min-width: 365px) and (max-width: 481px) {
-    .bat{
-  transform: scale(1);
-  position: relative;
-  left: 300px;
-    }
 
     .portofolio-items {
         width: 80%;
