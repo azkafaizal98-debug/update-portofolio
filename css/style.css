@@ -35,6 +35,15 @@ html,body{
     scroll-behavior: smooth;
 }
 
+.animate__animated.animate__fadeInUp {
+  --animate-duration: 3s;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+
 .mode{
     background: linear-gradient(
           to bottom,
@@ -69,7 +78,7 @@ body::-webkit-scrollbar{
     padding-left: 12px;
     flex-direction: row;
     /* background-color: var(--grey-black); */
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(22px);
 }
 
 .nav-flex label,#hamburger{
