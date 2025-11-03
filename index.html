@@ -49,7 +49,7 @@
     <div class="container-hero-img" id="1">
         <div class="text-flex">
             <div class="text  animate__animated animate__fadeIn"><h2>Azka Faizal <span>Dwi Ramadhan</span></h2></div>
-            <div class="text1  animate__animated animate__fadeInUp"><h1><span>MY </span>PORTOFOLIO</h1> <hr></div>
+            <div class="text1  animate__animated animate__fadeInUp"><h1><span id="element"></span></h1> <hr></div>
             <div class="text  animate__animated animate__fadeIn"><h3>Ngesrep, Jurangagung, <span>Plantungan, 
     <br>    Kendal, Jawa Tengah,</span> Indonesia</h3></div>
         </div>
@@ -218,8 +218,7 @@
         <h2><span>DATA</span> DIRI</h2>
         <hr>
         <div class="data-diri-flex">
-            <div class="text-data-diri">      
-              
+            <div class="text-data-diri">
                 <code>
                    <p>  class data diri { <br>
                         cons developer = ( <br>
@@ -301,6 +300,14 @@
       <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+  </script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+   <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Hiii World</i>', 'Iam Azka Faizal', 'I Web Developer'],
+      loop : true,
+      typeSpeed: 100,
+    });
   </script>
 </body>
 </html>

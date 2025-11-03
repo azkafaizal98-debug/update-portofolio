@@ -280,6 +280,10 @@ nav ul li a:hover{
      font-family: "Pixelify Sans", sans-serif;
 }
 
+.text1 #element {
+    color: white;
+}
+
 .text1 hr{
     width: 50%;
     margin: auto;
