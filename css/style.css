@@ -78,7 +78,7 @@ body::-webkit-scrollbar{
     padding-left: 12px;
     flex-direction: row;
     /* background-color: var(--grey-black); */
-    backdrop-filter: blur(22px);
+    backdrop-filter: blur(20px);
 }
 
 .nav-flex label,#hamburger{
