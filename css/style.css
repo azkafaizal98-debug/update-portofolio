@@ -368,7 +368,6 @@ nav ul li a:hover{
 .portofolio-items:hover{
     transform: scale(1.1);
     box-shadow: 1px 1px 12px var(--orange);
-    transition: 0.8s;
 }
 
 
@@ -637,8 +636,6 @@ nav ul li a:hover{
 
 .container-skils-items img:hover{
     border-left: 3px solid white;
-    transition: 1s;
-    transform: scale(1.1);
     box-shadow:  0 5px 20px -10px white;
     color: white;
 }
