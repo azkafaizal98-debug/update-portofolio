@@ -14,6 +14,74 @@ let img = document.getElementById("img")
 let hover = document.getElementById("hover")
 let hover2 = document.getElementById("hover2")
 let hover3 = document.getElementById("hover3")
+// Nav
+let nav = document.getElementById("nav")
+let nav2 = document.getElementById("nav2")
+let nav3 = document.getElementById("nav3")
+let nav4 = document.getElementById("nav4")
+let nav5= document.getElementById("nav5")
+let nav6= document.getElementById("nav6")
+
+// Navigasi a
+nav.addEventListener("mousemove" ,function(){
+    nav.style.transform = "scale(1.2)"
+    nav.style.color = "rgb(255, 81, 0)"
+    nav.style.transition = "0.8s"
+})
+nav.addEventListener("mouseout" ,function(){
+    nav.style.transform = "none"
+    nav.style.color = "white"
+})
+nav2.addEventListener("mousemove" ,function(){
+    nav2.style.transform = "scale(1.2)"
+    nav2.style.color = "rgb(255, 81, 0)"
+    nav2.style.transition = "0.8s"
+})
+
+nav2.addEventListener("mouseout" ,function(){
+    nav2.style.transform = "none"
+    nav2.style.color = "white"
+})
+nav3.addEventListener("mousemove" ,function(){
+    nav3.style.transform = "scale(1.2)"
+    nav3.style.color = "rgb(255, 81, 0)"
+    nav3.style.transition = "0.8s"
+})
+
+nav3.addEventListener("mouseout" ,function(){
+    nav3.style.transform = "none"
+    nav3.style.color = "white"
+})
+nav4.addEventListener("mousemove" ,function(){
+    nav4.style.transform = "scale(1.2)"
+    nav4.style.color = "rgb(255, 81, 0)"
+    nav4.style.transition = "0.8s"
+})
+
+nav4.addEventListener("mouseout" ,function(){
+    nav4.style.transform = "none"
+    nav4.style.color = "white"
+})
+nav5.addEventListener("mousemove" ,function(){
+    nav5.style.transform = "scale(1.2)"
+    nav5.style.color = "rgb(255, 81, 0)"
+    nav5.style.transition = "0.8s"
+})
+
+nav5.addEventListener("mouseout" ,function(){
+    nav5.style.transform = "none"
+    nav5.style.color = "white"
+})
+nav6.addEventListener("mousemove" ,function(){
+    nav6.style.transform = "scale(1.2)"
+    nav6.style.color = "rgb(255, 81, 0)"
+    nav6.style.transition = "0.8s"
+})
+
+nav6.addEventListener("mouseout" ,function(){
+    nav6.style.transform = "none"
+    nav6.style.color = "white"
+})
 
 // Logo
 hover.addEventListener("mousemove", function(){

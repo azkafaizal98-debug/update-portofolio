@@ -106,15 +106,6 @@ nav ul li a{
      font-family: "Pixelify Sans", sans-serif;
 }
 
-nav ul li a:hover{
-    /* background-color: var(--orange); */
-    transition: all 0.5s;
-    transform: scale(1.2);
-    transition: 0.8s;
-    color: var(--orange);
- 
-}
-
 
 .text-brand{
     color: white;
@@ -210,12 +201,6 @@ nav ul li a:hover{
 
     #nav-container .nav-flex input:checked ~ nav{
         display: inline;
-    }
-
-    nav ul li a:hover{
-        transform: none;
-        border-bottom: 3px solid var(--orange);
-        width: 100%;
     }
 
 }
