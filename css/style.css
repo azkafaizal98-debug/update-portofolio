@@ -156,10 +156,6 @@ nav ul li a:hover{
     margin: 13px;
 }
 
-.medsos ul li:hover{
-    transform: scale(1.2);
-    transition: 1s;
-}
 
 .medsos ul li a:hover{
     color: var(--orange);
@@ -241,15 +237,16 @@ nav ul li a:hover{
 .text-flex{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
-    /* backdrop-filter: blur(12px); */
+    padding: 40px;
+    text-align: start;
 }
 
-.text-flex .text1 span{
+/* .text-flex .text1 span{
     color:var(--orange);
-}
-
+} */
+/* 
 .text{
     color: white;
     border: 1px solid white;
@@ -271,13 +268,14 @@ nav ul li a:hover{
 
 .text h3{
      font-family: "Pixelify Sans", sans-serif;
-}
+} */
 
 .text1{
     color: white;
     font-size: 20px;
     margin-top: 40px;
-     font-family: "Pixelify Sans", sans-serif;
+    font-family: "Pixelify Sans", sans-serif;
+   
 }
 
 .text1 #element {
@@ -290,7 +288,10 @@ nav ul li a:hover{
     border: 3px solid var(--orange);
     margin-top: 10px;
     border-radius: 8px;
+}
 
+.text1 .paraf{
+    font-size: 12px;
 }
 
 /* Abut Me */

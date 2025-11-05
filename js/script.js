@@ -10,6 +10,39 @@ let skill4 = document.getElementById("skill4")
 let skill5 = document.getElementById("skill5")
 // Img 
 let img = document.getElementById("img")
+// Hover
+let hover = document.getElementById("hover")
+let hover2 = document.getElementById("hover2")
+let hover3 = document.getElementById("hover3")
+
+// Logo
+hover.addEventListener("mousemove", function(){
+    hover.style.transform = "scale(1.2)"
+    hover.style.transition = "1s"
+})
+hover.addEventListener("mouseout", function(){
+    hover.style.transform = "none"
+    hover.style.color = "white"
+})
+hover2.addEventListener("mousemove", function(){
+
+    hover2.style.transform = "scale(1.2)"
+    hover2.style.color = "orange"
+    hover2.style.transition = "1s"
+})
+hover2.addEventListener("mouseout", function(){
+    hover2.style.transform = "none"
+    hover2.style.color = "white"
+})
+hover3.addEventListener("mousemove", function(){
+    hover3.style.transform = "scale(1.2)"
+    hover3.style.color = "orange"
+    hover3.style.transition = "1s"
+})
+hover3.addEventListener("mouseout", function(){
+    hover3.style.transform = "none"
+    hover3.style.color = "white"
+})
 
 // Card
 card.addEventListener("mousemove",function(){
