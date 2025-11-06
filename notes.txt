@@ -29,4 +29,27 @@ Penjelasan Detail:
 - Perubahan: Menambahkan atribut style="display: none;" pada elemen div.
 - Tujuan: Memastikan bahwa bagian notes typing tidak terlihat saat halaman pertama kali dimuat, sehingga tombol "Click Me to Type" berfungsi sebagai toggle untuk menampilkan dan menyembunyikan elemen tersebut.
 - Cara kerja: Saat tombol diklik, JavaScript akan toggle display antara block dan none dengan animasi yang sesuai (jackInTheBox untuk tampil, hinge untuk sembunyi). Ini membuat interaksi "pas saat di click" karena elemen langsung merespons klik dengan animasi yang tepat.
-- Catatan: Kombinasi dengan kode JS yang ada memungkinkan toggle yang mulus, dengan teks tombol berubah antara "Click Me to Type" dan "Click Me To Remove", serta perubahan warna dan border untuk memberikan feedback visual.
+Catatan: Kombinasi dengan kode JS yang ada memungkinkan toggle yang mulus, dengan teks tombol berubah antara "Click Me to Type" dan "Click Me To Remove", serta perubahan warna dan border untuk memberikan feedback visual.
+
+Tanggal: [Tanggal hari ini, misalnya 2024-10-05]
+Perubahan: Memperbaiki toggle tema siang/malam dengan ikon Font Awesome sun/moon.
+
+Penjelasan Detail:
+- File yang dimodifikasi: js/script.js
+- Fungsi yang diubah: Event listener klik pada elemen dengan id "them".
+- Perilaku sebelumnya: Kode toggle yang salah, tidak berfungsi dengan benar karena kesalahan dalam kondisi (menggunakan === alih-alih contains) dan assignment classList (menggunakan = alih-alih method add/remove).
+- Perilaku baru: Saat klik ikon sun (fa-sun), ikon berubah menjadi moon (fa-moon) dan body mendapat class "mode" untuk tema gelap. Saat klik moon, kembali ke sun dan hapus class "mode" untuk tema terang.
+- Kode yang diubah:
+  them.addEventListener("click", function(){
+      if(them.classList.contains("fa-sun")) {
+          them.classList.remove("fa-sun");
+          them.classList.add("fa-moon");
+          body.classList.add("mode");
+      } else {
+          them.classList.remove("fa-moon");
+          them.classList.add("fa-sun");
+          body.classList.remove("mode");
+      }
+  });
+- Tujuan: Memungkinkan toggle antara tema siang (light) dan malam (dark) dengan perubahan ikon Font Awesome yang sesuai, memberikan pengalaman pengguna yang lebih baik.
+- Catatan: Pastikan ikon awal adalah fa-sun untuk tema siang default. Tema gelap diatur melalui CSS dengan class "mode" di body. Jika tema tidak berubah, periksa apakah CSS untuk class "mode" sudah didefinisikan di style.css.

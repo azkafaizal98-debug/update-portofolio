@@ -127,13 +127,14 @@ nav ul li a {
 .text-brand button {
     border-radius: 50%;
     background: transparent;
-    color: var(--coklat);
+    color:   #DDE1E7;
     border: none;
     padding-left: 10px;
 }
 
 .text-brand button i {
     font-size: 18px;
+    border-radius: 50%;
 }
 
 .text-brand h2 span {
@@ -326,6 +327,7 @@ nav ul li a {
     text-transform: uppercase;
     font-family: "Pixelify Sans", sans-serif;
     font-size: 14px;
+    cursor: pointer;
 }
 
 .text1 .paraf {
