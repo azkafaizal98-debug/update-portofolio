@@ -21,6 +21,10 @@ let nav3 = document.getElementById("nav3")
 let nav4 = document.getElementById("nav4")
 let nav5= document.getElementById("nav5")
 let nav6= document.getElementById("nav6")
+// Button
+let btn = document.getElementById("btn")
+let type = document.getElementById("type")
+
 
 // Navigasi a
 nav.addEventListener("mousemove" ,function(){
@@ -139,6 +143,52 @@ card3.addEventListener("mousemove",function(){
 card3.addEventListener("mouseout" ,function(){
     card3.style.transform = "none"
 })
+
+// Type 
+btn.addEventListener("click" ,function(){
+    if(type.style.display === "block")
+        type.style.display = "none"
+    else {
+        type.style.display = "block"
+    }
+})
+
+btn.addEventListener("click", function(){
+    if(btn.style.background === "white")
+         btn.style.background = "none"
+    else{
+        btn.style.background = "white"
+    }
+})
+
+btn.addEventListener("click", function(){
+    if(btn.style.color === "black")
+         btn.style.color = "white"
+    else{
+        btn.style.color = "black"
+    }
+})
+
+btn.addEventListener("click", function(){
+    if(btn.style.border === "2px solid black")
+         btn.style.border = " 2px solid white"
+    else{
+        btn.style.border = "2px solid black"
+    }
+})
+
+btn.addEventListener("mousemove" ,function(){
+    // btn.style.border = "2px solid rgb(255, 81, 0)"
+    btn.style.transition = "0.8s"
+    btn.style.boxShadow = " 0 5px 20px -10px var(--orange)"
+})
+btn.addEventListener("mouseout" ,function(){
+    // btn.style.border = "2px solid white"
+    btn.style.transition = "0.8s"
+    btn.style.boxShadow = "none"
+})
+
+
     
 // Skill
 
