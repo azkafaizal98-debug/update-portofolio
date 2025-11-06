@@ -26,11 +26,19 @@ let btn = document.getElementById("btn")
 let type = document.getElementById("type")
 // Tema 
 let them = document.getElementById("them")
-let body = document.getElementById("tema");
+let body = document.getElementById("tema")
 
-// Tema Dark And White
+//nama
+let write = document.getElementById("nama")
+let nama = prompt("Mauskan nama anda, nama anda akan terlihat di web")
 
+write.textContent = nama
+// Mian main
 
+if(nama === "azka")
+    alert("selamat datang Azka")
+else 
+    alert("kamu siapa")
 
 // Navigasi a
 nav.addEventListener("mousemove", function () {
@@ -234,7 +242,7 @@ btn.addEventListener("click", function () {
 btn.addEventListener("mousemove", function () {
     // btn.style.border = "2px solid rgb(255, 81, 0)"
     btn.style.transition = "0.8s"
-    btn.style.boxShadow = " 0 5px 20px -10px var(--orange)"
+    btn.style.boxShadow = " 1px 2px 12px var(--orange)"
 })
 btn.addEventListener("mouseout", function () {
     // btn.style.border = "2px solid white"
