@@ -1,0 +1,32 @@
+Riwayat Perubahan - Portofolio Azka Faizal
+
+Tanggal: [Tanggal hari ini, misalnya 2023-10-05]
+Perubahan: Menambahkan animasi hinge saat menyembunyikan elemen type-items pada klik tombol "Click Me to Type".
+
+Penjelasan Detail:
+- File yang dimodifikasi: js/script.js
+- Fungsi yang diubah: Event listener klik pada tombol dengan id "btn".
+- Perilaku sebelumnya: Toggle display block/none tanpa animasi.
+- Perilaku baru:
+  - Saat menyembunyikan (jika display block atau kosong):
+    - Tambahkan class "animate__hinge" ke elemen dengan id "type" (type-items).
+    - Gunakan setTimeout selama 2000ms (2 detik) untuk menunggu animasi hinge selesai.
+    - Setelah timeout, atur style.display = "none" dan hapus class "animate__hinge".
+  - Saat menampilkan (jika display none):
+    - Tambahkan class "animate__jackInTheBox" (sudah ada di HTML).
+    - Atur style.display = "block".
+- Tujuan: Membuat transisi yang lebih halus dan menarik saat menyembunyikan elemen, menggunakan library Animate.css yang sudah di-link di index.html.
+- Catatan: Animasi hinge membuat elemen terlihat seperti jatuh atau bergoyang sebelum menghilang, memberikan efek visual yang lebih dinamis.
+
+Ini memastikan pengalaman pengguna yang lebih baik tanpa mengubah fungsi toggle asli.
+
+Tanggal: [Tanggal hari ini]
+Perubahan: Mengatur elemen type-items agar tersembunyi secara default saat halaman dimuat.
+
+Penjelasan Detail:
+- File yang dimodifikasi: index.html
+- Elemen yang diubah: Div dengan id="type" (type-items).
+- Perubahan: Menambahkan atribut style="display: none;" pada elemen div.
+- Tujuan: Memastikan bahwa bagian notes typing tidak terlihat saat halaman pertama kali dimuat, sehingga tombol "Click Me to Type" berfungsi sebagai toggle untuk menampilkan dan menyembunyikan elemen tersebut.
+- Cara kerja: Saat tombol diklik, JavaScript akan toggle display antara block dan none dengan animasi yang sesuai (jackInTheBox untuk tampil, hinge untuk sembunyi). Ini membuat interaksi "pas saat di click" karena elemen langsung merespons klik dengan animasi yang tepat.
+- Catatan: Kombinasi dengan kode JS yang ada memungkinkan toggle yang mulus, dengan teks tombol berubah antara "Click Me to Type" dan "Click Me To Remove", serta perubahan warna dan border untuk memberikan feedback visual.

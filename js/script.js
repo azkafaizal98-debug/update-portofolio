@@ -144,14 +144,25 @@ card3.addEventListener("mouseout" ,function(){
     card3.style.transform = "none"
 })
 
-// Type 
-btn.addEventListener("click" ,function(){
-    if(type.style.display === "block")
-        type.style.display = "none"
-    else {
-        type.style.display = "block"
+// Type
+btn.addEventListener("click", function() {
+    if (type.style.display !== "none") {
+        // Menyembunyikan dengan animasi hinge
+        type.classList.remove("animate__jackInTheBox");
+        type.classList.add("animate__hinge");
+        setTimeout(function() {
+            type.style.display = "none";
+            type.classList.remove("animate__hinge");
+        }, 2000);
+    } else {
+        // Menampilkan dengan animasi jackInTheBox
+        type.style.display = "block";
+        type.classList.add("animate__jackInTheBox");
+        setTimeout(function() {
+            type.classList.remove("animate__jackInTheBox");
+        }, 1000); // Durasi jackInTheBox sekitar 1s
     }
-})
+});
 
 btn.addEventListener("click", function(){
     if(btn.style.background === "white")
@@ -174,6 +185,14 @@ btn.addEventListener("click", function(){
          btn.style.border = " 2px solid white"
     else{
         btn.style.border = "2px solid black"
+    }
+})
+
+btn.addEventListener("click", function(){
+    if(btn.textContent === "Click Me to Type")
+         btn.textContent = "Click Me To Remove"
+    else{
+        btn.textContent = "Click Me to Type"
     }
 })
 

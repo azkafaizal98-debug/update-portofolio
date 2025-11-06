@@ -296,6 +296,18 @@ nav ul li a {
     margin-top: 45px;
     border: 1.8px solid;
     padding: 10px;
+    background-image: url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+    background-color: #faebd7;
+    color: #3b2f2f;
+    font-family: 'Georgia', serif;
+}
+
+.type-items p{
+    font-family: 'Georgia', serif;
+}
+
+.notes{
+    text-align: start;
 }
 
 .type {
@@ -310,6 +322,7 @@ nav ul li a {
     border: 2px solid white;
     padding: 14px;
     text-align: center;
+    text-transform: uppercase;
 }
 
 .text1 .paraf {
@@ -1151,7 +1164,7 @@ textarea::placeholder {
         width: 100%;
     }
 
-    .btn{
+    .btn {
         width: 100%;
     }
 
@@ -1177,7 +1190,7 @@ textarea::placeholder {
         width: 100%;
     }
 
-    .btn{
+    .btn {
         width: 100%;
     }
 }
