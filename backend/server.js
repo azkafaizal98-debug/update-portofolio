@@ -9,15 +9,8 @@ const cors = require("cors")
 app.use(cors())
 
 // Serve static files
-app.use(express.static(path.join(__dirname, "../src")));
-app.use(express.static(path.join(__dirname, "../html")));
-app.use(express.static(path.join(__dirname, "../css")));
-app.use(express.static(path.join(__dirname, "../js")));
-
-app.use(express.static(path.join(__dirname, "../items")));
-app.use(express.static(path.join(__dirname, "../image")));
-app.use(express.static(path.join(__dirname, "../project")));
-app.use(express.static(path.join(__dirname, "../sertifikat")));
+app.use('/src', express.static(path.join(__dirname, '../src')));
+app.use('/items', express.static(path.join(__dirname, '../items')));
 
 
 const PORT = process.env.PORT || 4000
