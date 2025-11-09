@@ -7,7 +7,7 @@ app.use(express.json())
 const cors = require("cors")
 app.use(cors())
 
-const PORT = 4000 || process.env.PORT
+const PORT = process.env.PORT || 4000
 
 const SUPABASE_URL = "https://haisqjwphwzaehqgpkjp.supabase.co"
 const SUPABASE_SERVICE_ROLE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhhaXNxandwaHd6YWVocWdwa2pwIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MjUyNDAzOCwiZXhwIjoyMDc4MTAwMDM4fQ.JNWG2klBMJ2hJbSX34UB1u4tMBtryf3irmX5EX77N_U"
