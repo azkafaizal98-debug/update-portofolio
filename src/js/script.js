@@ -20,6 +20,17 @@ sendBtn.addEventListener("click", async function () {
     const gmail = document.getElementById("gmail")
     const nama = document.getElementById("nama")
     const comment = document.getElementById("comment")
+
+    if (!gmail.value.trim() || !nama.value.trim() || !comment.value.trim()) {
+        gmail.placeholder = "Masukan Gmail!!"
+        nama.placeholder = "Masukan Nama!!"
+        comment.placeholder = "Masukan Comment!!"
+        gmail.style.border = "1px solid red"
+        nama.style.border = "1px solid red"
+        comment.style.border = "1px solid red"
+        return;
+    }
+
     const data = {
         gmail: gmail.value,
         nama: nama.value,
@@ -31,27 +42,57 @@ sendBtn.addEventListener("click", async function () {
         gmail.value = '';
         nama.value = '';
         comment.value = '';
-        if(!gmail.value.trim()||!nama.value.trim()||!comment.value.trim()){
-            gmail.placeholder ="Masukan Gmail!!"
-            nama.placeholder ="Masukan Nama!!"
-            comment.placeholder ="Masukan Comment!!"
-            gmail.style.border = "1px solid red"
-            nama.style.border = "1px solid red"
-            comment.style.border = "1px solid red"
-           return;
-        }
-        gmail.addEventListener("input" ,function(){
-            gmail.style.border = "1px solid white"
-            gmail.placeholder = "Gmail"
-        })
+        // Reset placeholder
+        gmail.placeholder = "Gmail";
+        nama.placeholder = "Nama";
+        comment.placeholder = "Comment....";
+        // Reset border
+        gmail.style.border = "1px solid #ccc";
+        nama.style.border = "1px solid #ccc";
+        comment.style.border = "1px solid #ccc";
     } catch {
         console.error("Eror: ", eror);
         alert("Gagal Mengirim Pesan");
     }
 
-
 });
 
+// Reset border dan placeholder saat input
+gmail.addEventListener("input", function() {
+    if (gmail.value.trim()) {
+        gmail.style.border = "1px solid #ccc"; 
+        gmail.placeholder = ""; 
+    }
+});
+
+nama.addEventListener("input", function() {
+    if (nama.value.trim()) {
+        nama.style.border = "1px solid #ccc";
+        nama.placeholder = "";
+    }
+});
+
+comment.addEventListener("input", function() {
+    if (comment.value.trim()) {
+        comment.style.border = "1px solid #ccc";
+        comment.placeholder = "";
+    }
+});
+
+
+sendBtn.addEventListener("mousemove" ,function(){
+   sendBtn.style.boxShadow = "0 5px 20px -10px var(--orange)";
+    sendBtn.style.outline = "none";
+    sendBtn.style.transform = "scale(1.1)";
+    sendBtn.style.color = "var(--orange)";
+    sendBtn.style.transition = "1s";
+})
+sendBtn.addEventListener("mouseout" ,function(){
+   sendBtn.style.boxShadow = "none";
+    sendBtn.style.outline = "none";
+    sendBtn.style.transform = "none";
+    sendBtn.style.color = "none";
+})
 
 // Card
 let card = document.getElementById("card")
