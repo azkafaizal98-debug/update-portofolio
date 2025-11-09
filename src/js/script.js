@@ -1,3 +1,58 @@
+
+// Sambung ke back end 
+async function loadComment(params) {
+    const res = await fetch('http://localhost:4000/')
+    const comment = await res.json()
+}
+
+const api = {
+    getComment: () => fetch('http://localhost:4000/').then(res => res.json()),
+    postComment: (data) => fetch('http://localhost:4000/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    })
+}
+
+
+const sendBtn = document.getElementById("sendBtn")
+sendBtn.addEventListener("click", async function () {
+    const gmail = document.getElementById("gmail")
+    const nama = document.getElementById("nama")
+    const comment = document.getElementById("comment")
+    const data = {
+        gmail: gmail.value,
+        nama: nama.value,
+        comment: comment.value
+    }
+    try {
+        const respon = await api.postComment(data);
+        console.log("Comment Posteed:", respon);
+        gmail.value = '';
+        nama.value = '';
+        comment.value = '';
+        if(!gmail.value.trim()||!nama.value.trim()||!comment.value.trim()){
+            gmail.placeholder ="Masukan Gmail!!"
+            nama.placeholder ="Masukan Nama!!"
+            comment.placeholder ="Masukan Comment!!"
+            gmail.style.border = "1px solid red"
+            nama.style.border = "1px solid red"
+            comment.style.border = "1px solid red"
+           return;
+        }
+        gmail.addEventListener("input" ,function(){
+            gmail.style.border = "1px solid white"
+            gmail.placeholder = "Gmail"
+        })
+    } catch {
+        console.error("Eror: ", eror);
+        alert("Gagal Mengirim Pesan");
+    }
+
+
+});
+
+
 // Card
 let card = document.getElementById("card")
 let card2 = document.getElementById("card2")
@@ -28,17 +83,6 @@ let type = document.getElementById("type")
 let them = document.getElementById("them")
 let body = document.getElementById("tema")
 
-//nama
-let write = document.getElementById("nama")
-let nama = prompt("Mauskan nama anda, nama anda akan terlihat di web")
-
-write.textContent = nama
-// Mian main
-
-if(nama === "azka")
-    alert("selamat datang Azka")
-else 
-    alert("kamu siapa")
 
 // Navigasi a
 nav.addEventListener("mousemove", function () {

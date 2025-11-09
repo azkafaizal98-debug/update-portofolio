@@ -52,7 +52,7 @@
         <div class="text-flex">
 
             <div class="text1  animate__animated animate__fadeIn">
-                <p class="paraf">Hiii👋 <span id="nama"></span></p>
+                <p class="paraf">Hiii👋</p>
                 <h1>
                     <span id="element"></span>
                 </h1>
@@ -189,22 +189,22 @@
     </div>
     <!-- Sertifikat -->
     <div class="container-sertifikat">
-        <div class="sertifikat-flex">
-            <div class="sertifikat-items"><img src="sertifikat/sertifikat-arcade.png" alt=""></div>
-            <div class="sertifikat-items"><img src="sertifikat/sertifikat-dicoding/sertifikat dicoding_page-0001.jpg"
+        <div aria-hidden class="sertifikat-flex">
+            <div class="sertifikat-items"><img src="/items/sertifikat/sertifikat-arcade.png" alt=""></div>
+            <div class="sertifikat-items"><img src="/items/sertifikat/sertifikat dicoding_page-0001.jpg"
                     alt=""></div>
-            <div class="sertifikat-items"><img src="sertifikat/setifikat-pkbjj/setifikat pkbjj_page-0001.jpg" alt="">
+            <div class="sertifikat-items"><img src="/items/sertifikat/setifikat pkbjj_page-0001.jpg" alt="">
             </div>
-            <div class="sertifikat-items"><img src="sertifikat/setifikat-pkbjj/setifikat pkbjj_page-0002.jpg" alt="">
+            <div class="sertifikat-items"><img src="/items/sertifikat/setifikat pkbjj_page-0002.jpg" alt="">
             </div>
         </div>
         <div aria-hidden class="sertifikat-flex">
-            <div class="sertifikat-items"><img src="sertifikat/sertifikat-arcade.png" alt=""></div>
-            <div class="sertifikat-items"><img src="sertifikat/sertifikat-dicoding/sertifikat dicoding_page-0001.jpg"
+            <div class="sertifikat-items"><img src="/items/sertifikat/sertifikat-arcade.png" alt=""></div>
+            <div class="sertifikat-items"><img src="/items/sertifikat/sertifikat dicoding_page-0001.jpg"
                     alt=""></div>
-            <div class="sertifikat-items"><img src="sertifikat/setifikat-pkbjj/setifikat pkbjj_page-0001.jpg" alt="">
+            <div class="sertifikat-items"><img src="/items/sertifikat/setifikat pkbjj_page-0001.jpg" alt="">
             </div>
-            <div class="sertifikat-items"><img src="sertifikat/setifikat-pkbjj/setifikat pkbjj_page-0002.jpg" alt="">
+            <div class="sertifikat-items"><img src="/items/sertifikat/setifikat pkbjj_page-0002.jpg" alt="">
             </div>
         </div>
     </div>
@@ -335,11 +335,17 @@
                     <div class="contact-items">
                         <div class="container-textarea">
                             <div class="text-area1">
-                                <textarea name="" id="" placeholder="Your Name"></textarea>
-                                <textarea name="" id="" placeholder="Your Email"></textarea>
+                                <form method="POST">
+                                    <input type="text" name="gmail" id="gmail" placeholder="Gmail">
+                                    <input type="text" name="nama" id="nama" placeholder="Nama">
+                                </form>
                             </div>
-                            <div class="text-area2"><textarea name="" id="" placeholder="Your Message"></textarea></div>
-                            <button type="button">SEND MESSAGE</button>
+                            <div class="text-area2">
+                                <form method="POST">
+                                    <input type="text" name="comment" id="comment" placeholder="Comment..">
+                                </form>
+                            </div>
+                            <button type="button" id="sendBtn">SEND MESSAGE</button>
                         </div>
                     </div>
                 </div>
