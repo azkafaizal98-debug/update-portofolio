@@ -1,11 +1,16 @@
 const express = require("express");
 const supabase = require("@supabase/supabase-js");
+const path = require("path");
 
 const app = express();
 app.use(express.json())
 
 const cors = require("cors")
 app.use(cors())
+
+// Serve static files
+app.use(express.static(path.join(__dirname, "../src")));
+app.use(express.static(path.join(__dirname, "../items")));
 
 const PORT = process.env.PORT || 4000
 
@@ -15,10 +20,15 @@ const SUPABASE_SERVICE_ROLE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJz
 const db = supabase.createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE)
 
 app.get("/", async(req , res)=>{
-    const getComment = await db.from("comment").select()
-    res.json({
-        getComment
-    })
+    // Check if request accepts HTML (browser request)
+    if (req.accepts('html')) {
+        res.sendFile(path.join(__dirname, "../src/html/index.html"));
+    } else {
+        const getComment = await db.from("comment").select()
+        res.json({
+            getComment
+        })
+    }
 })
 
 app.post("/", async(req, res)=>{

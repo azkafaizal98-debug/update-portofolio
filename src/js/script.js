@@ -6,8 +6,8 @@ async function loadComment(params) {
 }
 
 const api = {
-    getComment: () => fetch('http://localhost:4000/').then(res => res.json()),
-    postComment: (data) => fetch('http://localhost:4000/', {
+    getComment: () => fetch('/').then(res => res.json()),
+    postComment: (data) => fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
