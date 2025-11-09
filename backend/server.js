@@ -10,7 +10,15 @@ app.use(cors())
 
 // Serve static files
 app.use(express.static(path.join(__dirname, "../src")));
+app.use(express.static(path.join(__dirname, "../html")));
+app.use(express.static(path.join(__dirname, "../css")));
+app.use(express.static(path.join(__dirname, "../js")));
+
 app.use(express.static(path.join(__dirname, "../items")));
+app.use(express.static(path.join(__dirname, "../image")));
+app.use(express.static(path.join(__dirname, "../project")));
+app.use(express.static(path.join(__dirname, "../sertifikat")));
+
 
 const PORT = process.env.PORT || 4000
 
