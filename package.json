@@ -1,0 +1,17 @@
+{
+  "name": "update-portofolio",
+  "version": "1.0.0",
+  "description": "Portofolio Azka Faizal dengan backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "nodemon backend/server.js",
+    "build": "echo 'No build step required for this project'"
+  },
+  "keywords": ["portofolio", "web", "backend"],
+  "author": "Azka Faizal",
+  "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
