@@ -971,6 +971,7 @@ h2 {
     padding: 10px;
     border-radius: 8px;
     text-align: start;
+    text-transform: capitalize;
 }
 
 .comment-item p{
