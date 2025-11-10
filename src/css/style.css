@@ -961,6 +961,10 @@ h2 {
     padding: 12px;
 }
 
+.comment-flex::-webkit-scrollbar{
+    display: none;
+}
+
 .comment-item{
     width: 100%;
     margin: 12px;
