@@ -50,12 +50,14 @@ sendBtn.addEventListener("click", async function () {
         gmail.style.border = "1px solid #ccc";
         nama.style.border = "1px solid #ccc";
         comment.style.border = "1px solid #ccc";
-    } catch {
-        console.error("Eror: ", eror);
+    } catch (error) {
+        console.error("Error: ", error);
         alert("Gagal Mengirim Pesan");
     }
-
+    await DisplayComment();
 });
+
+
 
 // Reset border dan placeholder saat input
 gmail.addEventListener("input", function() {
@@ -521,4 +523,40 @@ img.addEventListener("mouseout", function () {
     img.style.transform = "none"
 })
 
+// Display Comment
 
+async function DisplayComment() {
+    try {
+        const response = await fetch('http://localhost:4000/', {
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        const data = await response.json();
+
+        const commentItems = document.getElementById("commentItems");
+        commentItems.innerHTML = "";
+
+        if (data.getComment && data.comment.data && data.getComment.length > 0) {
+            data.getComment.forEach(comment => {
+                const commentDiv = document.createElement("div");
+                commentDiv.classList.add("comment-item");
+                commentDiv.innerHTML = `
+                    <p><strong>${comment.nama}</strong>
+                    <p>${comment.comment}</p>
+                    <hr>`;
+                commentItems.appendChild(commentDiv);
+            });
+        } else {
+            commentItems.innerHTML = `<p>Belum Ada Komentar</p>`;
+        }
+    } catch (error) {
+        console.error("Error Loading comment", error);
+        const commentItems = document.getElementById("commentItems");
+        commentItems.innerHTML = `<p>Gagal Memuat Komentar</p>`;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", async function() {
+    await DisplayComment();
+});

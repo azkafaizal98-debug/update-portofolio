@@ -8,7 +8,7 @@ app.use(express.json())
 const cors = require("cors")
 app.use(cors())
 
-// Serve static files
+// Server static files
 app.use('/src', express.static(path.join(__dirname, '../src')));
 app.use('/items', express.static(path.join(__dirname, '../items')));
 
