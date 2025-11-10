@@ -537,8 +537,8 @@ async function DisplayComment() {
         const commentItems = document.getElementById("commentItems");
         commentItems.innerHTML = "";
 
-        if (data.getComment && data.comment.data && data.getComment.length > 0) {
-            data.getComment.forEach(comment => {
+        if (data.getComment && data.getComment.data && data.getComment.data.length > 0) {
+            data.getComment.data.forEach(comment => {
                 const commentDiv = document.createElement("div");
                 commentDiv.classList.add("comment-item");
                 commentDiv.innerHTML = `
