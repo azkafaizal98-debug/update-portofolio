@@ -541,10 +541,23 @@ async function DisplayComment() {
             data.getComment.data.forEach(comment => {
                 const commentDiv = document.createElement("div");
                 commentDiv.classList.add("comment-item");
-                commentDiv.innerHTML = `
-                    <p><strong>${comment.nama}</strong>
-                    <p>${comment.comment}</p>
-                    <hr>`;
+
+                // Buat elemen untuk nama
+                const nameP = document.createElement("p");
+                const nameStrong = document.createElement("strong");
+                nameStrong.textContent = comment.nama;
+                nameP.appendChild(nameStrong);
+                commentDiv.appendChild(nameP);
+
+                // Buat elemen untuk komentar (gunakan textContent untuk menghindari XSS)
+                const commentP = document.createElement("p");
+                commentP.textContent = comment.comment;
+                commentDiv.appendChild(commentP);
+
+                // Tambahkan hr
+                const hr = document.createElement("hr");
+                commentDiv.appendChild(hr);
+
                 commentItems.appendChild(commentDiv);
             });
         } else {
