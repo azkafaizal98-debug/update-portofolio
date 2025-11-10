@@ -527,7 +527,7 @@ img.addEventListener("mouseout", function () {
 
 async function DisplayComment() {
     try {
-        const response = await fetch('http://localhost:4000/', {
+        const response = await fetch('/', {
             headers: {
                 'Accept': 'application/json'
             }
@@ -542,21 +542,19 @@ async function DisplayComment() {
                 const commentDiv = document.createElement("div");
                 commentDiv.classList.add("comment-item");
 
-                // Buat elemen untuk nama
                 const nameP = document.createElement("p");
                 const nameStrong = document.createElement("strong");
                 nameStrong.textContent = comment.nama;
                 nameP.appendChild(nameStrong);
                 commentDiv.appendChild(nameP);
 
-                // Buat elemen untuk komentar (gunakan textContent untuk menghindari XSS)
                 const commentP = document.createElement("p");
                 commentP.textContent = comment.comment;
                 commentDiv.appendChild(commentP);
 
-                // Tambahkan hr
-                const hr = document.createElement("hr");
-                commentDiv.appendChild(hr);
+                const i = document.createElement("i");
+                commentDiv.appendChild(i);
+                i.classList.add("fa-solid", "fa-message");
 
                 commentItems.appendChild(commentDiv);
             });
